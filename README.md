@@ -23,12 +23,12 @@ GRUP reconnaît tout - WBM = MERDE !
 
 - IDE: Ne jamais utiliser pour les SSD (vieille techno !)
 
-!!! Attention !!!
-===========
+! Attention !
+=============
 Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
 Exemple avec SATA:
-===============
+==================
 "Ce disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère."
 
 NVMe:
