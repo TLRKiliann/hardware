@@ -1,6 +1,6 @@
 # HARDWARE
 
-## BIOS - UEFI - GRUB - SATA - AHCI - RAID - NVMe
+## BIOS - UEFI - GRUB - SATA - AHCI - RAID - NVMe - PCIe
 
 ***BIOS*** => (Basic Input/Output System) = UEFI
 
@@ -18,8 +18,6 @@ GRUB reconnaît tout - WBM = MERDE !
 
 ***PCIe*** => (Peripheral Component Interconnect Express)
 
-=====
-
 - BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
 - GRUB: juste après le menu de la carte mère (le BIOS)
 - SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
@@ -30,20 +28,20 @@ GRUB reconnaît tout - WBM = MERDE !
 
 - IDE: Ne jamais utiliser pour les SSD (vieille techno !)
 
-! Attention !
-=============
+### ! Attention !
+
 Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
-Logique SATA
-=============
+### Logique SATA
+
 "Ce disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère."
 
-NVMe
-=====
+### NVMe
+
 un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
 
-BIOS => UEFI
-==========
+### BIOS => UEFI
+
 Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 1. Se réveille (lui, il est toujours "endormi" mais prêt).
 2. Vérifie que tous les composants sont présents : processeur, RAM, carte graphique, disques... (c'est le POST).
@@ -54,7 +52,7 @@ Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 Le BIOS : Une vieille technologie remplacée par l'UEFI
 Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+---
 
 ## PCIe - BUS - CHIPSET
 
@@ -75,7 +73,7 @@ PCIe 5.0	    4 Go/s	            64 Go/s	        2021
 PCIe 6.0	    8 Go/s	            128 Go/s	    2022 (matériel rare)
 ```
 
-Ce qu'il faut comprendre : Le processeur parle directement à la carte graphique et aux SSD NVMe via PCIe
+Le processeur parle directement à la carte graphique et aux SSD NVMe via PCIe
 
 ```
 Technologie	    Route	                            Protocole	                Vitesse typique
@@ -86,6 +84,8 @@ SSD SATA	 Route nationale	                      AHCI	                    550 Mo/
 HDD SATA	 Petite route	                          AHCI	                    150-250 Mo/s
 IDE	         Chemin de terre	                      PATA	                    133 Mo/s
 ```
+
+---
 
 ## Chipset
 
@@ -115,6 +115,6 @@ Processeur (le patron)
             └──────┬──────┘
                    │
         ┌──────────┼──────────┬──────────┐
-        │          │          │    			 │
+        │          │          │    		 │
     Ports SATA  Ports USB  Ethernet    	Audio
 ```
