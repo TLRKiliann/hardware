@@ -180,9 +180,7 @@ Le BIOS : Une vieille technologie remplacée par l'UEFI
 
 Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
 
-!!! Attention !!!
-
-Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
+⚠️ Dans le BIOS de Windows il faut que le SATA soit sur AHCI ⚠️
 
 [up](#Hardware)
 
