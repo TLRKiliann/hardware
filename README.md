@@ -99,6 +99,18 @@ Le bus d'adresses (Address Bus) : C'est le facteur qui transporte l'adresse de l
 
 Le bus de contrôle (Control Bus) : Ce sont les feux de signalisation et les panneaux de direction. Il transporte les signaux qui indiquent quoi faire (Lire ? Écrire ? Attendre ?).
 
+Sur Linux
+
+`lspci`
+
+`lsusb`
+
+`lscpu`
+
+```
+Architecture :            x86_64   # <-- CECI est crucial
+```
+
 ---
 
 ### Chipset
