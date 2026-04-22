@@ -8,9 +8,9 @@
 
 ***GRUB*** => (Grand Unified Bootloader)
 
-***SATA*** => Serial ATA
+***SATA*** => (Serial ATA)
 
-***AHCI*** => Advanced Host Controller Interface
+***AHCI*** => (Advanced Host Controller Interface)
 
 ***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
 
