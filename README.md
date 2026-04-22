@@ -2,21 +2,21 @@
 
 ## BIOS - UEFI - GRUB - SATA - AHCI - RAID - NVMe
 
-***BIOS*** (Basic Input/Output System) = UEFI
+***BIOS*** => (Basic Input/Output System) = UEFI
 
-***UEFI*** (Unified Extensible Firmware Interface)
+***UEFI*** => (Unified Extensible Firmware Interface)
 
-***GRUB*** (Grand Unified Bootloader)
+***GRUB*** => (Grand Unified Bootloader)
 
 GRUB vs. Windows Boot Manager
 
 GRUP reconnaît tout - WBM = MERDE !
 
-***NVMe*** (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
+***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
 
-***AHCI*** Advanced Host Controller Interface
+***AHCI*** => Advanced Host Controller Interface
 
-***PCIe*** (Peripheral Component Interconnect Express)
+***PCIe*** => (Peripheral Component Interconnect Express)
 
 - BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
 - GRUB: juste après le menu de la carte mère (le BIOS)
