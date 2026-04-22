@@ -38,9 +38,9 @@ un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche di
 
 ## PCIe
 
-PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de communication) qui relie tous les composants critiques directement au processeur.
-
 ***PCIe*** => (Peripheral Component Interconnect Express)
+
+- PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de communication) qui relie tous les composants critiques directement au processeur.
 
 * La carte graphique (le plus gros consommateur)
 * Les SSD NVMe (les disques ultra-rapides)
