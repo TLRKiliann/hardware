@@ -101,6 +101,8 @@ Le bus de contrôle (Control Bus) : Ce sont les feux de signalisation et les pan
 
 Sur Linux
 
+La commande `lspci` (List PCI) : Le bus PCI (Peripheral Component Interconnect) est le bus moderne le plus important. C'est l'autoroute principale pour la plupart des composants internes (carte graphique, carte son, réseau SATA, USB...).
+
 `lspci`
 
 ```
@@ -109,17 +111,31 @@ Sur Linux
 00:1f.2 SATA controller             <-- Vos disques durs
 ```
 
+USB:
+
 `lsusb`
 
 ```
 périphériques externes (clef USB, souris, clavier, imprimante)
 ```
 
+CPU:
+
 `lscpu`
 
 ```
 Architecture :            x86_64   # <-- CECI est crucial
 ```
+
+Carte graphique:
+
+`lspci -v`
+
+`lspci -v | grep -A 10 "VGA"`
+
+Version plus lisible:
+
+`sudo lshw -class display`
 
 ---
 
