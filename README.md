@@ -1,4 +1,4 @@
-# hardware
+# HARDWARE
 
 ## BIOS - UEFI - GRUB - SATA - AHCI - RAID - NVMe
 
