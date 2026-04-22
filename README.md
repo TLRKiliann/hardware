@@ -16,6 +16,8 @@
 
 ***PCIe*** => (Peripheral Component Interconnect Express)
 
+>
+
 - BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
 - GRUB: juste après le menu de la carte mère (le BIOS)
 - SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
