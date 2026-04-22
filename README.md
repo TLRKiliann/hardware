@@ -91,9 +91,17 @@ HDD SATA	 Petite route	                          AHCI	                    150-25
 IDE	         Chemin de terre	                      PATA	                    133 Mo/s
 ```
 
+### BUS
+
+Le bus de données (Data Bus) : C'est l'autoroute qui transporte les informations elles-mêmes (les données). Sa "largeur" (8, 16, 32, 64 bits) détermine combien de bits peuvent passer en même temps. Plus c'est large, plus c'est rapide.
+
+Le bus d'adresses (Address Bus) : C'est le facteur qui transporte l'adresse de l'information. Il dit "Hé, va chercher ce qui se trouve à l'adresse X". Sa largeur détermine la quantité maximale de mémoire que le CPU peut adresser.
+
+Le bus de contrôle (Control Bus) : Ce sont les feux de signalisation et les panneaux de direction. Il transporte les signaux qui indiquent quoi faire (Lire ? Écrire ? Attendre ?).
+
 ---
 
-## Chipset
+### Chipset
 
 ```
 Processeur (le patron)
