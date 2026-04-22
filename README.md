@@ -34,7 +34,7 @@ Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
 ### Logique SATA
 
-"Ce disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère."
+Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère.
 
 ### NVMe
 
