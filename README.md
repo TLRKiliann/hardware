@@ -11,6 +11,8 @@
 
 ***SATA*** => (Serial ATA)
 
+***RAID*** (Redundant Array of Independent Disks)
+
 ***AHCI*** => (Advanced Host Controller Interface)
 
 ***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
