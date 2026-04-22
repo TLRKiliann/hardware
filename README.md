@@ -3,7 +3,7 @@
 - [PCIe](#PCIe)
 - [Bus](#Bus)
 - [Chipset](#Chipset)
-- [UEFI (BIOS)](#UEFI (BIOS))
+- [UEFI (BIOS)](#uefi-bios)
 
 ## SATA - AHCI - RAID - NVMe - PCIe - BIOS - UEFI - GRUB
 
