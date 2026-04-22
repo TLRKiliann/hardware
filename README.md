@@ -36,7 +36,7 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 
 un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
 
-### BIOS => UEFI
+## UEFI (BIOS)
 
 Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 1. Se réveille.
