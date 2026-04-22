@@ -103,7 +103,17 @@ Sur Linux
 
 `lspci`
 
+```
+00:00.0 Host bridge
+00:02.0 VGA compatible controller   <-- Votre carte graphique
+00:1f.2 SATA controller             <-- Vos disques durs
+```
+
 `lsusb`
+
+```
+périphériques externes (clef USB, souris, clavier, imprimante)
+```
 
 `lscpu`
 
