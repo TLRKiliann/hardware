@@ -10,20 +10,20 @@
 
 GRUB vs. Windows Boot Manager
 
-GRUP reconnaît tout - WBM = MERDE !
-
-***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
+GRUB reconnaît tout - WBM = MERDE !
 
 ***AHCI*** => Advanced Host Controller Interface
+
+***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
 
 ***PCIe*** => (Peripheral Component Interconnect Express)
 
 - BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
 - GRUB: juste après le menu de la carte mère (le BIOS)
 - SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
-- Slot M.2: emplacement direct sur la carte mère (remplace SATA).
 - AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
 - RAID: méthode pour faire travailler plusieurs disks ensemble. 
+- Slot M.2: emplacement direct sur la carte mère (remplace SATA).
 - NVMe: Plus rapide que AHCI et fait pour SSD M.2 (connection du SSD M.2 sur Slot M.2 de la mother board)
 
 - IDE: Ne jamais utiliser pour les SSD (vieille techno !)
