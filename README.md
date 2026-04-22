@@ -161,7 +161,7 @@ Processeur (le patron)
 
 ---
 
-## UEFI (BIOS)
+## UEFI (BIOS) 🔧
 
 ***BIOS*** => (Basic Input/Output System) = UEFI
 
@@ -188,7 +188,7 @@ Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
 ---
 
-## GRUB
+## GRUB 💻
 
 ***GRUB*** => (Grand Unified Bootloader)
 
