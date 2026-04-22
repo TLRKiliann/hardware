@@ -1,2 +1,109 @@
 # hardware
-hardware
+
+## BIOS - UEFI - GRUB - SATA - AHCI - RAID - NVMe
+
+***BIOS*** (Basic Input/Output System) = UEFI
+***UEFI*** (Unified Extensible Firmware Interface)
+***GRUB*** (Grand Unified Bootloader)
+
+GRUB vs. Windows Boot Manager
+GRUP reconnaît tout - WBM = MERDE !
+
+***NVMe*** (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
+***AHCI*** Advanced Host Controller Interface
+***PCIe*** (Peripheral Component Interconnect Express)
+
+- BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
+- GRUB: juste après le menu de la carte mère (le BIOS)
+- SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
+- Slot M.2: emplacement direct sur la carte mère (remplace SATA).
+- AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
+- RAID: méthode pour faire travailler plusieurs disks ensemble. 
+- NVMe: Plus rapide que AHCI et fait pour SSD M.2 (connection du SSD M.2 sur Slot M.2 de la mother board)
+
+- IDE: Ne jamais utiliser pour les SSD (vieille techno !)
+
+!!! Attention !!!
+===========
+Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
+
+Exemple avec SATA:
+===============
+"Ce disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère."
+
+NVMe:
+=====
+un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
+
+BIOS => UEFI
+==========
+Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
+1. Se réveille (lui, il est toujours "endormi" mais prêt).
+2. Vérifie que tous les composants sont présents : processeur, RAM, carte graphique, disques... (c'est le POST).
+3. Initialise le matériel (met les disques, les ports USB, la carte graphique en état de marche).
+4. Cherche un système d'exploitation sur les disques (dans l'ordre que vous avez défini).
+5. Charge le système d'exploitation en mémoire et lui passe la main.
+
+Le BIOS : Une vieille technologie remplacée par l'UEFI
+Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+## PCIe - BUS - CHIPSET
+
+PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de communication) qui relie tous les composants critiques directement au processeur.
+
+* La carte graphique (le plus gros consommateur)
+* Les SSD NVMe (les disques ultra-rapides)
+* Les cartes d'extension (son, réseau, capture vidéo)
+* Les ports USB, Ethernet, Wi-Fi (via des ponts)
+
+Génération	Débit par voie	Débit x16	Année
+PCIe 1.0	250 Mo/s	4 Go/s	2004
+PCIe 2.0	500 Mo/s	8 Go/s	2007
+PCIe 3.0	1 Go/s	16 Go/s	2010
+PCIe 4.0	2 Go/s	32 Go/s	2017
+PCIe 5.0	4 Go/s	64 Go/s	2021
+PCIe 6.0	8 Go/s	128 Go/s	2022 (matériel rare)
+
+Ce qu'il faut comprendre : Le processeur parle directement à la carte graphique et aux SSD NVMe via PCIe
+
+Technologie	Route	Protocole	Vitesse typique
+SSD NVMe (PCIe 5.0 x4)	Autoroute 8 voies	NVMe	10 000+ Mo/s
+SSD NVMe (PCIe 4.0 x4)	Autoroute 4 voies	NVMe	5 000-7 000 Mo/s
+SSD NVMe (PCIe 3.0 x4)	Autoroute 2 voies	NVMe	3 000-3 500 Mo/s
+SSD SATA	Route nationale	AHCI	550 Mo/s
+HDD SATA	Petite route	AHCI	150-250 Mo/s
+IDE	Chemin de terre	PATA	133 Mo/s
+
+## Chipset
+
+```
+Processeur (le patron)
+    │
+    ├── Direct (autoroute) → Carte graphique, RAM, SSD NVMe principal
+    │
+    └── Via le chipset (petite route) → USB, SATA, Ethernet, Audio, etc.
+```
+
+```
+                    PROCESSEUR (CPU)
+                           │
+            ┌──────────────┼──────────────┐
+            │              │              │
+        PCIe x16        PCIe x4        	PCIe x4
+            │              │              │
+      Carte graphique  SSD NVMe #1   	SSD NVMe #2
+            │							 |
+            └──────┬───────┘
+                   │
+            LIAISON RAPIDE (DMI / PCIe)
+                   │
+            ┌──────┴──────┐
+            │   CHIPSET   │
+            └──────┬──────┘
+                   │
+        ┌──────────┼──────────┬──────────┐
+        │          │          │    			 │
+    Ports SATA  Ports USB  Ethernet    	Audio
+```
