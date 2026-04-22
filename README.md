@@ -8,12 +8,6 @@
   
 ## SATA - AHCI - RAID - NVMe
 
-***BIOS*** => (Basic Input/Output System) = UEFI
-
-***UEFI*** => (Unified Extensible Firmware Interface)
-
-***GRUB*** => (Grand Unified Bootloader)
-
 ***SATA*** => (Serial ATA)
 
 ***AHCI*** => (Advanced Host Controller Interface)
@@ -28,12 +22,6 @@
 - RAID: méthode pour faire travailler plusieurs disks ensemble. 
 - Slot M.2: emplacement direct sur la carte mère (remplace SATA).
 - NVMe: Plus rapide que AHCI et fait pour SSD M.2 (connection du SSD M.2 sur Slot M.2 de la mother board)
-- BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
-- GRUB: juste après le menu de la carte mère (le BIOS)
-
-### ! Attention !
-
-Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
 ### Logique SATA
 
@@ -174,6 +162,12 @@ Processeur (le patron)
 
 ## UEFI (BIOS)
 
+***BIOS*** => (Basic Input/Output System) = UEFI
+
+***UEFI*** => (Unified Extensible Firmware Interface)
+
+- BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
+
 Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 1. Se réveille.
 2. Vérifie que tous les composants sont présents : processeur, RAM, carte graphique, disques... (c'est le POST).
@@ -185,9 +179,19 @@ Le BIOS : Une vieille technologie remplacée par l'UEFI
 
 Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
 
+!!! Attention !!!
+
+Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
+
+[up](#Hardware)
+
 ---
 
 ## GRUB
+
+***GRUB*** => (Grand Unified Bootloader)
+
+- GRUB: juste après le menu de la carte mère (le BIOS)
 
 Après l'UEFI vient le GRUB pour choisir l'OS.
 
