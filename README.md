@@ -4,8 +4,9 @@
 - [Bus](#Bus)
 - [Chipset](#Chipset)
 - [UEFI (BIOS)](#uefi-bios)
-
-## SATA - AHCI - RAID - NVMe - PCIe - BIOS - UEFI - GRUB
+- [GRUB](#grub)
+  
+## SATA - AHCI - RAID - NVMe
 
 ***BIOS*** => (Basic Input/Output System) = UEFI
 
@@ -184,7 +185,11 @@ Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI�
 
 ---
 
-## GRUB vs. Windows Boot Manager
+## GRUB
+
+Après l'UEFI vient le GRUB pour choisir l'OS.
+
+GRUB vs. Windows Boot Manager
 
 GRUB reconnaît tout les OS - Windows Boot Manager = très limité !
 
