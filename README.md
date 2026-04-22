@@ -127,6 +127,10 @@ CPU:
 Architecture :            x86_64   # <-- CECI est crucial
 ```
 
+Détail du bus entre le CPU et la RAM (sa vitesse, sa largeur, son nombre de canaux:
+
+`sudo lshw -class memory | grep -A 5 "description: System Memory"`
+
 Carte graphique:
 
 `lspci -v`
