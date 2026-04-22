@@ -8,10 +8,6 @@
 
 ***GRUB*** => (Grand Unified Bootloader)
 
-GRUB vs. Windows Boot Manager
-
-GRUB reconnaît tout - WBM = MERDE !
-
 ***AHCI*** => Advanced Host Controller Interface
 
 ***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
@@ -52,6 +48,12 @@ Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 Le BIOS : Une vieille technologie remplacée par l'UEFI
 
 Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
+
+---
+
+## GRUB vs. Windows Boot Manager
+
+GRUB reconnaît tout les OS - Windows Boot Manager = très limité !
 
 ---
 
