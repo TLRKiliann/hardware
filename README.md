@@ -3,8 +3,9 @@
 []()
 []()
 []()
-[Bus](#Bus)
-[Chipset](#Chipset)
+
+- [Bus](#Bus)
+- [Chipset](#Chipset)
 
 
 ## SATA - AHCI - RAID - NVMe - PCIe - BIOS - UEFI - GRUB
