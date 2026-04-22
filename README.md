@@ -1,12 +1,9 @@
 # HARDWARE
 
-[]()
-[]()
-[]()
-
+- [PCIe](#PCIe)
 - [Bus](#Bus)
 - [Chipset](#Chipset)
-
+- [UEFI (BIOS)](#UEFI (BIOS))
 
 ## SATA - AHCI - RAID - NVMe - PCIe - BIOS - UEFI - GRUB
 
@@ -47,28 +44,7 @@ un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche di
 
 ---
 
-## UEFI (BIOS)
-
-Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
-1. Se réveille.
-2. Vérifie que tous les composants sont présents : processeur, RAM, carte graphique, disques... (c'est le POST).
-3. Initialise le matériel (met les disques, les ports USB, la carte graphique en état de marche).
-4. Cherche un système d'exploitation sur les disques (dans l'ordre que vous avez défini).
-5. Charge le système d'exploitation en mémoire et lui passe la main.
-
-Le BIOS : Une vieille technologie remplacée par l'UEFI
-
-Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
-
----
-
-## GRUB vs. Windows Boot Manager
-
-GRUB reconnaît tout les OS - Windows Boot Manager = très limité !
-
----
-
-## PCIe - BUS - CHIPSET
+## PCIe
 
 PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de communication) qui relie tous les composants critiques directement au processeur.
 
@@ -99,7 +75,11 @@ HDD SATA	 Petite route	                          AHCI	                    150-25
 IDE	         Chemin de terre	                      PATA	                    133 Mo/s
 ```
 
-### BUS
+[up](#Hardware)
+
+---
+
+## BUS
 
 Le bus de données (Data Bus) : C'est l'autoroute qui transporte les informations elles-mêmes (les données). Sa "largeur" (8, 16, 32, 64 bits) détermine combien de bits peuvent passer en même temps. Plus c'est large, plus c'est rapide.
 
@@ -149,6 +129,8 @@ Version plus lisible:
 
 `sudo lshw -class display`
 
+[up](#Hardware)
+
 ---
 
 ### Chipset
@@ -184,3 +166,28 @@ Processeur (le patron)
 ```
 
 [up](#Hardware)
+
+---
+
+## UEFI (BIOS)
+
+Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
+1. Se réveille.
+2. Vérifie que tous les composants sont présents : processeur, RAM, carte graphique, disques... (c'est le POST).
+3. Initialise le matériel (met les disques, les ports USB, la carte graphique en état de marche).
+4. Cherche un système d'exploitation sur les disques (dans l'ordre que vous avez défini).
+5. Charge le système d'exploitation en mémoire et lui passe la main.
+
+Le BIOS : Une vieille technologie remplacée par l'UEFI
+
+Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
+
+---
+
+## GRUB vs. Windows Boot Manager
+
+GRUB reconnaît tout les OS - Windows Boot Manager = très limité !
+
+[up](#Hardware)
+
+---
