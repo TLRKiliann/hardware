@@ -43,6 +43,8 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 
 un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
 
+[up](#Hardware)
+
 ---
 
 ## PCIe
