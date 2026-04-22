@@ -32,7 +32,7 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 
 un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
 
-[up](#Hardware)
+[⬆️ up](#Hardware)
 
 ---
 
@@ -69,7 +69,7 @@ HDD SATA	   Petite route	                          AHCI	                    150-
 IDE	         Chemin de terre	                      PATA	                    133 Mo/s
 ```
 
-[up](#Hardware)
+[⬆️ up](#Hardware)
 
 ---
 
@@ -123,7 +123,7 @@ Version plus lisible:
 
 `sudo lshw -class display`
 
-[up](#Hardware)
+[⬆️ up](#Hardware)
 
 ---
 
@@ -159,7 +159,7 @@ Processeur (le patron)
     Ports SATA  Ports USB  Ethernet    	Audio
 ```
 
-[up](#Hardware)
+[⬆️ up](#Hardware)
 
 ---
 
@@ -184,7 +184,7 @@ Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI�
 
 ⚠️ Dans le BIOS de Windows il faut que le SATA soit sur AHCI ⚠️
 
-[up](#Hardware)
+[⬆️ up](#Hardware)
 
 ---
 
@@ -200,6 +200,6 @@ GRUB vs. Windows Boot Manager
 
 GRUB reconnaît tout les OS - Windows Boot Manager = très limité !
 
-[up](#Hardware)
+[⬆️ up](#Hardware)
 
 ---
