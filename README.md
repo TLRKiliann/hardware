@@ -1,12 +1,14 @@
 # HARDWARE
 
-## BIOS - UEFI - GRUB - SATA - AHCI - RAID - NVMe - PCIe
+## SATA - AHCI - RAID - NVMe - PCIe - BIOS - UEFI - GRUB
 
 ***BIOS*** => (Basic Input/Output System) = UEFI
 
 ***UEFI*** => (Unified Extensible Firmware Interface)
 
 ***GRUB*** => (Grand Unified Bootloader)
+
+***SATA*** => Serial ATA
 
 ***AHCI*** => Advanced Host Controller Interface
 
