@@ -171,16 +171,16 @@ Processeur (le patron)
 
 - BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
 
+Le BIOS : Une vieille technologie remplacée par l'UEFI
+
+Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
+
 Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 1. Se réveille.
 2. Vérifie que tous les composants sont présents : processeur, RAM, carte graphique, disques... (c'est le POST).
 3. Initialise le matériel (met les disques, les ports USB, la carte graphique en état de marche).
 4. Cherche un système d'exploitation sur les disques (dans l'ordre que vous avez défini).
 5. Charge le système d'exploitation en mémoire et lui passe la main.
-
-Le BIOS : Une vieille technologie remplacée par l'UEFI
-
-Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI (Unified Extensible Firmware Interface). Mais tout le monde dit encore "BIOS" par habitude.
 
 ⚠️ Dans le BIOS de Windows il faut que le SATA soit sur AHCI ⚠️
 
