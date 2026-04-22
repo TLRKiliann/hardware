@@ -1,5 +1,12 @@
 # HARDWARE
 
+[]()
+[]()
+[]()
+[Bus](Bus)
+[]()
+
+
 ## SATA - AHCI - RAID - NVMe - PCIe - BIOS - UEFI - GRUB
 
 ***BIOS*** => (Basic Input/Output System) = UEFI
