@@ -32,11 +32,11 @@ GRUB reconnaît tout - WBM = MERDE !
 =============
 Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
-Logique SATA:
+Logique SATA
 =============
 "Ce disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère."
 
-NVMe:
+NVMe
 =====
 un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
 
@@ -63,23 +63,27 @@ PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de co
 * Les cartes d'extension (son, réseau, capture vidéo)
 * Les ports USB, Ethernet, Wi-Fi (via des ponts)
 
+```
 Génération	Débit par voie	Débit x16	Année
-PCIe 1.0	250 Mo/s	4 Go/s	2004
-PCIe 2.0	500 Mo/s	8 Go/s	2007
-PCIe 3.0	1 Go/s	16 Go/s	2010
-PCIe 4.0	2 Go/s	32 Go/s	2017
-PCIe 5.0	4 Go/s	64 Go/s	2021
-PCIe 6.0	8 Go/s	128 Go/s	2022 (matériel rare)
+PCIe 1.0	250 Mo/s	4 Go/s	        2004
+PCIe 2.0	500 Mo/s	8 Go/s	        2007
+PCIe 3.0	1 Go/s	    16 Go/s	        2010
+PCIe 4.0	2 Go/s	    32 Go/s	        2017
+PCIe 5.0	4 Go/s	    64 Go/s	        2021
+PCIe 6.0	8 Go/s	    128 Go/s	    2022 (matériel rare)
+```
 
 Ce qu'il faut comprendre : Le processeur parle directement à la carte graphique et aux SSD NVMe via PCIe
 
-Technologie	Route	Protocole	Vitesse typique
-SSD NVMe (PCIe 5.0 x4)	Autoroute 8 voies	NVMe	10 000+ Mo/s
-SSD NVMe (PCIe 4.0 x4)	Autoroute 4 voies	NVMe	5 000-7 000 Mo/s
-SSD NVMe (PCIe 3.0 x4)	Autoroute 2 voies	NVMe	3 000-3 500 Mo/s
-SSD SATA	Route nationale	AHCI	550 Mo/s
-HDD SATA	Petite route	AHCI	150-250 Mo/s
-IDE	Chemin de terre	PATA	133 Mo/s
+```
+Technologie	    Route	                            Protocole	                Vitesse typique
+SSD NVMe     (PCIe 5.0 x4) Autoroute 8 voies	      NVMe	                    10 000+ Mo/s
+SSD NVMe     (PCIe 4.0 x4) Autoroute 4 voies	      NVMe	                    5 000-7 000 Mo/s
+SSD NVMe     (PCIe 3.0 x4) Autoroute 2 voies	      NVMe	                    3 000-3 500 Mo/s
+SSD SATA	Route nationale	                          AHCI	                    550 Mo/s
+HDD SATA	 Petite route	                          AHCI	                    150-250 Mo/s
+IDE	        Chemin de terre	                          PATA	                    133 Mo/s
+```
 
 ## Chipset
 
