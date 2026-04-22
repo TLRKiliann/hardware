@@ -1,10 +1,11 @@
 # HARDWARE
 
-- [PCIe](#PCIe)
-- [Bus](#Bus)
-- [Chipset](#Chipset)
-- [UEFI (BIOS)](#uefi-bios)
-- [GRUB](#grub)
+1) [SATA - AHCI - RAID - NVMe](#sata-ahci-raid-nvme)
+2) [PCIe](#PCIe)
+3) [Bus](#Bus)
+4) [Chipset](#Chipset)
+5) [UEFI (BIOS)](#uefi-bios)
+6) [GRUB](#grub)
   
 ## SATA - AHCI - RAID - NVMe
 
@@ -13,8 +14,6 @@
 ***AHCI*** => (Advanced Host Controller Interface)
 
 ***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
-
-***PCIe*** => (Peripheral Component Interconnect Express)
 
 - IDE: Ne jamais utiliser pour les SSD (vieille techno !)
 - SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
@@ -38,6 +37,8 @@ un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche di
 ## PCIe
 
 PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de communication) qui relie tous les composants critiques directement au processeur.
+
+***PCIe*** => (Peripheral Component Interconnect Express)
 
 * La carte graphique (le plus gros consommateur)
 * Les SSD NVMe (les disques ultra-rapides)
