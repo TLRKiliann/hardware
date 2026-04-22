@@ -163,7 +163,7 @@ Processeur (le patron)
 
 ---
 
-## UEFI (BIOS) 🔧
+## UEFI (BIOS)
 
 ***BIOS*** => (Basic Input/Output System) = UEFI
 
@@ -188,7 +188,7 @@ Ce qu'on appelle "BIOS" aujourd'hui est en réalité presque toujours de l'UEFI�
 
 ---
 
-## GRUB ▶️
+## GRUB
 
 ***GRUB*** => (Grand Unified Bootloader)
 
