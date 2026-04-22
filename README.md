@@ -32,8 +32,8 @@ GRUB reconnaît tout - WBM = MERDE !
 =============
 Dans le BIOS de Windows il faut que le SATA soit sur AHCI.
 
-Exemple avec SATA:
-==================
+Logique SATA:
+=============
 "Ce disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère."
 
 NVMe:
