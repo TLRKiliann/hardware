@@ -19,6 +19,12 @@ SATA (Serial ATA) est la norme de câble et de connecteur qui sert à brancher l
 
 SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
 
+```
+Connecteur	                            Rôle                              Venant de
+SATA Data (petit, en L)	                Les données (votre question)      La carte mère
+SATA Power (plus large, en L aussi)	    L'électricité (5V/12V)            L'alimentation de l'ordinateur
+```
+
 Voir la liste des disques et leur type de connexion
 
 `lsblk -d -o name,rota,size,type,tran`
