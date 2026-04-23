@@ -18,6 +18,7 @@ SATA (Serial ATA) est la norme de câble et de connecteur qui sert à brancher l
 2. Il est remplacé par le NVMe	Les nouveaux SSD rapides n'utilisent plus le SATA, mais le bus PCIe directement, via le format M.2. C'est 5 à 10 fois plus rapide.
 
 SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
+Il existe aussi le SATA POWER.
 
 ```
 Connecteur	                            Rôle                              Venant de
