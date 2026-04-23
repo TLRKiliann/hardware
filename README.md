@@ -48,7 +48,7 @@ un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche di
 * Les ports USB, Ethernet, Wi-Fi (via des ponts)
 
 ```
-Génération	    Débit par voie      Débit x16       Année
+Génération	    Débit par voie     Débit x16        Année
 PCIe 1.0	      250 Mo/s	          4 Go/s           2004
 PCIe 2.0	      500 Mo/s	          8 Go/s           2007
 PCIe 3.0	      1 Go/s              16 Go/s          2010
