@@ -56,6 +56,8 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 
 - AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
 
+[⬆️ up](#Hardware)
+
 ---
 
 ## RAID
@@ -63,6 +65,69 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 ***RAID*** (Redundant Array of Independent Disks)
 
 - RAID: méthode pour faire travailler plusieurs disks ensemble. 
+
+Sans RAID (le mode normal)
+Vous disposez d'une seule camionnette qui effectue tous les trajets. C'est le fonctionnement standard.
+
+Avec RAID 0 (la vitesse)
+Vous utilisez deux camionnettes. Vous chargez 500 colis dans chacune. Les deux partent en même temps. Résultat : vous livrez deux fois plus vite. Mais c'est risqué : si une camionnette a un accident, vous perdez la moitié des colis (ceux qu'elle transportait).
+
+Avec RAID 1 (la sécurité)
+Vous utilisez deux camionnettes, mais vous chargez les 1000 colis complets dans chacune d'elles. Les deux partent en même temps. Si une camionnette tombe en panne, l'autre continue et vous ne perdez aucun colis. C'est sécurisé, mais c'est cher : vous utilisez deux camionnettes pour livrer seulement 1000 colis (au lieu de 2000).
+
+Les RAID les plus courants
+
+```
+RAID 0
+RAID 1
+RAID 5
+RAID 10
+```
+
+```
+SANS RAID (2 disques séparés) :
+┌────────┐     ┌────────┐
+│ Disque A│     │ Disque B│
+│ Fichier │     │ Fichier │
+│ complet │     │ complet │
+└────────┘     └────────┘
+→ Le système voit deux lettres (D: et E:)
+
+RAID 0 (découpage) :
+┌────────┐     ┌────────┐
+│ Disque A│     │ Disque B│
+│ Moitié  │     │ Moitié  │
+│ du      │     │ du      │
+│ fichier │     │ fichier │
+└────────┘     └────────┘
+→ Le système voit une seule lettre (D:)
+
+RAID 1 (miroir) :
+┌────────┐     ┌────────┐
+│ Disque A│     │ Disque B│
+│ Copie   │ =  │ Copie   │
+│ exacte  │     │ exacte  │
+└────────┘     └────────┘
+→ Le système voit une seule lettre (D:)
+```
+
+Les deux types de RAID
+
+```
+Type	                Où ça se passe ?	                                                  Avantage	                                                          Inconvénient
+RAID matériel	        Sur une carte contrôleur dédiée (souvent dans les serveurs)	        Transparent pour le système, plus rapide	                          Cher, carte spécifique
+RAID logiciel	        Géré par le système d'exploitation (Linux mdadm, Windows, macOS)	  Gratuit, flexible, fonctionne avec n'importe quels disques	        Utilise un peu de CPU
+```
+
+Voir les disques et leur organisation
+
+`lsblk`
+
+Si un RAID logiciel existe (mdadm)
+
+`cat /proc/mdstat`
+
+[⬆️ up](#Hardware)
 
 ---
 
