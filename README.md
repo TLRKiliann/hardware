@@ -1,11 +1,14 @@
 # HARDWARE
 
 1) [SATA](#sata)
-2) [PCIe](#PCIe)
-3) [Bus](#Bus)
-4) [Chipset](#Chipset)
-5) [UEFI (BIOS)](#uefi-bios)
-6) [GRUB](#grub)
+2) [AHCI](#ahci)
+3) [RAID](#raid)
+4) [NVMe](#NVMe)
+5) [PCIe](#PCIe)
+6) [Bus](#Bus)
+7) [Chipset](#Chipset)
+8) [UEFI (BIOS)](#uefi-bios)
+9) [GRUB](#grub)
   
 ## SATA
 
@@ -39,28 +42,38 @@ sdb      0     512G   disk   sata   ← SSD SATA (ROTA=0)
 nvme0n1  0     1T     disk   nvme   ← SSD rapide (pas du SATA)
 ```
 
-## AHCI - RAID - NVMe
-
-***RAID*** (Redundant Array of Independent Disks)
-
-***AHCI*** => (Advanced Host Controller Interface)
-
-***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
-
-- IDE: Ne jamais utiliser pour les SSD (vieille techno !)
-
-- AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
-- RAID: méthode pour faire travailler plusieurs disks ensemble. 
-- Slot M.2: emplacement direct sur la carte mère (remplace SATA).
-- NVMe: Plus rapide que AHCI et fait pour SSD M.2 (connection du SSD M.2 sur Slot M.2 de la mother board)
-
 ### Logique SATA
 
 Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère.
 
-### NVMe
+---
+
+## AHCI
+
+***AHCI*** => (Advanced Host Controller Interface)
+
+- AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
+
+---
+
+## RAID
+
+***RAID*** (Redundant Array of Independent Disks)
+
+- RAID: méthode pour faire travailler plusieurs disks ensemble. 
+
+---
+
+## NVMe
+
+***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
+
+- NVMe: Plus rapide que AHCI et fait pour SSD M.2 (connection du SSD M.2 sur Slot M.2 de la mother board)
+- Slot M.2: emplacement direct sur la carte mère (remplace SATA).
 
 un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche directement dans un slot M.2 et parle un autre protocole (NVMe) via un autre bus (PCI Express).
+
+- IDE: Ne jamais utiliser pour les SSD (vieille techno !)
 
 [⬆️ up](#Hardware)
 
