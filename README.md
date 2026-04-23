@@ -24,10 +24,10 @@ Voir la liste des disques et leur type de connexion
 `lsblk -d -o name,rota,size,type,tran`
 
 ```
-NAME  ROTA SIZE TYPE TRAN
-sda      1 256G disk sata   ← disque dur mécanique (ROTA=1)
-sdb      0 512G disk sata   ← SSD SATA (ROTA=0)
-nvme0n1  0   1T disk nvme   ← SSD rapide (pas du SATA)
+NAME    ROTA   SIZE   TYPE   TRAN
+sda      1     256G   disk   sata   ← disque dur mécanique (ROTA=1)
+sdb      0     512G   disk   sata   ← SSD SATA (ROTA=0)
+nvme0n1  0     1T     disk   nvme   ← SSD rapide (pas du SATA)
 ```
 
 ***RAID*** (Redundant Array of Independent Disks)
