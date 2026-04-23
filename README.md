@@ -23,6 +23,8 @@ Voir la liste des disques et leur type de connexion
 
 `lsblk -d -o name,rota,size,type,tran`
 
+Résultats
+
 ```
 NAME    ROTA   SIZE   TYPE   TRAN
 sda      1     256G   disk   sata   ← disque dur mécanique (ROTA=1)
