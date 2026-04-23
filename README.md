@@ -64,7 +64,7 @@ Technologie	    Route	                            Protocole	                Vite
 SSD NVMe     (PCIe 5.0 x4) Autoroute 8 voies	      NVMe	                    10 000+ Mo/s
 SSD NVMe     (PCIe 4.0 x4) Autoroute 4 voies	      NVMe	                    5 000-7 000 Mo/s
 SSD NVMe     (PCIe 3.0 x4) Autoroute 2 voies	      NVMe	                    3 000-3 500 Mo/s
-SSD SATA	   Route nationale	                      AHCI	                    550 Mo/s
+SSD SATA     Route nationale	                      AHCI	                    550 Mo/s
 HDD SATA     Petite route	                          AHCI	                    150-250 Mo/s
 IDE          Chemin de terre	                      PATA	                    133 Mo/s
 ```
