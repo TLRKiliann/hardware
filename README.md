@@ -54,7 +54,7 @@ PCIe 2.0	      500 Mo/s	          8 Go/s	        2007
 PCIe 3.0	      1 Go/s	            16 Go/s	        2010
 PCIe 4.0	      2 Go/s	            32 Go/s	        2017
 PCIe 5.0	      4 Go/s	            64 Go/s	        2021
-PCIe 6.0	      8 Go/s	            128 Go/s	      2022 (matériel rare)
+PCIe 6.0	      8 Go/s	            128 Go/s        2022 (matériel rare)
 ```
 
 Le processeur parle directement à la carte graphique et aux SSD NVMe via PCIe
@@ -65,8 +65,8 @@ SSD NVMe     (PCIe 5.0 x4) Autoroute 8 voies	      NVMe	                    10 0
 SSD NVMe     (PCIe 4.0 x4) Autoroute 4 voies	      NVMe	                    5 000-7 000 Mo/s
 SSD NVMe     (PCIe 3.0 x4) Autoroute 2 voies	      NVMe	                    3 000-3 500 Mo/s
 SSD SATA	   Route nationale	                      AHCI	                    550 Mo/s
-HDD SATA	   Petite route	                          AHCI	                    150-250 Mo/s
-IDE	         Chemin de terre	                      PATA	                    133 Mo/s
+HDD SATA     Petite route	                          AHCI	                    150-250 Mo/s
+IDE          Chemin de terre	                      PATA	                    133 Mo/s
 ```
 
 [⬆️ up](#Hardware)
