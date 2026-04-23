@@ -14,7 +14,7 @@
 
 ***SATA*** => (Serial ATA)
 
-SATA (Serial ATA) est la norme de câble et de connecteur qui sert à brancher la plupart des disques durs (HDD) et SSD à la carte mère.
+- SATA (Serial ATA) est la norme de câble et de connecteur qui sert à brancher la plupart des disques durs (HDD) et SSD à la carte mère.
 
 1. C'est lent (aujourd'hui)	Un SATA classique (version 3.0) tourne à 6 Gbit/s (environ 550 Mo/s réels). C'est très bien pour un disque dur mécanique, mais c'est le goulot d'étranglement pour un SSD récent.
 
