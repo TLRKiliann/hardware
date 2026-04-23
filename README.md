@@ -11,6 +11,25 @@
 
 ***SATA*** => (Serial ATA)
 
+SATA (Serial ATA) est la norme de câble et de connecteur qui sert à brancher la plupart des disques durs (HDD) et SSD à la carte mère.
+
+1. C'est lent (aujourd'hui)	Un SATA classique (version 3.0) tourne à 6 Gbit/s (environ 550 Mo/s réels). C'est très bien pour un disque dur mécanique, mais c'est le goulot d'étranglement pour un SSD récent.
+
+2. Il est remplacé par le NVMe	Les nouveaux SSD rapides n'utilisent plus le SATA, mais le bus PCIe directement, via le format M.2. C'est 5 à 10 fois plus rapide.
+
+SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
+
+Voir la liste des disques et leur type de connexion
+
+`lsblk -d -o name,rota,size,type,tran`
+
+```
+NAME  ROTA SIZE TYPE TRAN
+sda      1 256G disk sata   ← disque dur mécanique (ROTA=1)
+sdb      0 512G disk sata   ← SSD SATA (ROTA=0)
+nvme0n1  0   1T disk nvme   ← SSD rapide (pas du SATA)
+```
+
 ***RAID*** (Redundant Array of Independent Disks)
 
 ***AHCI*** => (Advanced Host Controller Interface)
@@ -18,7 +37,7 @@
 ***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
 
 - IDE: Ne jamais utiliser pour les SSD (vieille techno !)
-- SATA: câble qui relie SSD à la carte mère (NVMe relie direct au CPU).
+
 - AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
 - RAID: méthode pour faire travailler plusieurs disks ensemble. 
 - Slot M.2: emplacement direct sur la carte mère (remplace SATA).
