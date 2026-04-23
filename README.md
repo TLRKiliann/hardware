@@ -56,6 +56,22 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 
 - AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
 
+(IDE = l'ancêtre)
+
+L'AHCI (Advanced Host Controller Interface) est un mode de fonctionnement pour les cartes mères qui permet au système d'exploitation (Windows, Linux, etc.) de communiquer efficacement et de profiter pleinement des fonctionnalités avancées des disques durs et SSD modernes.
+
+Avantage
+
+- NCQ (Native Command Queuing) rend le PC plus réactif lorsqu'il y a plusieurs tâches en même temps et réorganise les demandes de lecture/écriture. 
+
+- Le "Hot Plug" : C'est la possibilité de brancher ou débrancher un disque dur SATA pendant que l'ordinateur est allumé
+
+IDE est obsolète
+
+AHCI et plus rapide que IDE
+
+NVMe est plus rapide que AHCI
+
 [⬆️ up](#Hardware)
 
 ---
