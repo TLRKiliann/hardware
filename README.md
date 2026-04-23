@@ -1,13 +1,13 @@
 # HARDWARE
 
-1) [SATA - AHCI - RAID - NVMe](#sata-ahci-raid-nvme)
+1) [SATA](#sata)
 2) [PCIe](#PCIe)
 3) [Bus](#Bus)
 4) [Chipset](#Chipset)
 5) [UEFI (BIOS)](#uefi-bios)
 6) [GRUB](#grub)
   
-## SATA - AHCI - RAID - NVMe
+## SATA
 
 ***SATA*** => (Serial ATA)
 
@@ -38,6 +38,8 @@ sda      1     256G   disk   sata   ← disque dur mécanique (ROTA=1)
 sdb      0     512G   disk   sata   ← SSD SATA (ROTA=0)
 nvme0n1  0     1T     disk   nvme   ← SSD rapide (pas du SATA)
 ```
+
+## AHCI - RAID - NVMe
 
 ***RAID*** (Redundant Array of Independent Disks)
 
