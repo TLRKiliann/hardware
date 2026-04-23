@@ -46,6 +46,8 @@ nvme0n1  0     1T     disk   nvme   ← SSD rapide (pas du SATA)
 
 Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA sur un port SATA de la carte mère.
 
+[⬆️ up](#Hardware)
+
 ---
 
 ## AHCI
