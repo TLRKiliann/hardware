@@ -145,7 +145,7 @@ Processeur (le patron)
         PCIe x16        PCIe x4        	PCIe x4
             │              │              │
       Carte graphique  SSD NVMe #1   	SSD NVMe #2
-            │			         |
+            │              |
             └──────┬───────┘
                    │
             LIAISON RAPIDE (DMI / PCIe)
@@ -155,7 +155,7 @@ Processeur (le patron)
             └──────┬──────┘
                    │
         ┌──────────┼──────────┬──────────┐
-        │          │          │    		   │
+        │          │          │          │
     Ports SATA  Ports USB  Ethernet    	Audio
 ```
 
