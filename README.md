@@ -54,7 +54,7 @@ PCIe 2.0	      500 Mo/s	          8 Go/s	         2007
 PCIe 3.0	      1 Go/s              16 Go/s	         2010
 PCIe 4.0	      2 Go/s              32 Go/s	         2017
 PCIe 5.0	      4 Go/s              64 Go/s	         2021
-PCIe 6.0	      8 Go/s              128 Go/s         2022 (matériel rare)
+PCIe 6.0	      8 Go/s              128 Go/s         2022
 ```
 
 Le processeur parle directement à la carte graphique et aux SSD NVMe via PCIe
