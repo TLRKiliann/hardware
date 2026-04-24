@@ -6,7 +6,7 @@ Vous trouverez ici quelques fiches pour mieux comprendre le hardware, appliquée
 - Laptop
 - Smartphone
 
-Au programme : SATA, AHCI, RAID, NVMe, ainsi que les différences entre un laptop et un PC.
+Au programme : les composants, interfaces, protocoles, firmware, etc.
 Et bonne nouvelle : tout est accessible visuellement via des commandes Linux :+1:
 
 Ce n'est pas un guide exhaustif, mais une base solide pour saisir le rôle des composants. Pour les détails techniques, rien ne vous empêche d'aller plus loin, au cas par cas.
