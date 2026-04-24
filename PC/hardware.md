@@ -95,6 +95,8 @@ Mini-ITX	    17 × 17 cm	        PC tout petit (HTPC, serveur maison)
 Propriétaire	Variable	        Laptops, PC Dell/HP/Lenovo préfabriqués (non standard)
 ```
 
+[⬆️ up](#hardware-pc)
+
 ---
 
 ## CPU
@@ -149,6 +151,8 @@ Horloge (fréquence)	Battement qui cadence le CPU (ex: 3,5 GHz = 3,5 milliards d
 **Infos détaillées**
 
 `lscpu`
+
+[⬆️ up](#hardware-pc)
 
 ---
 
@@ -218,6 +222,8 @@ Cache CPU	        Mémoire vive ultra-rapide	Non	                        Travail
 VRAM (carte graph)	Mémoire vive GPU	        Non	                        Textures, images 3D
 ```
 
+[⬆️ up](#hardware-pc)
+
 ---
 
 ## Carte graphique
@@ -226,4 +232,16 @@ VRAM (carte graph)	Mémoire vive GPU	        Non	                        Texture
 
 ### GPU
 
+under dev
+
+[⬆️ up](#hardware-pc)
+
+---
+
 ## Carte réseau (internet)
+
+under dev
+
+[⬆️ up](#Hardware)
+
+---

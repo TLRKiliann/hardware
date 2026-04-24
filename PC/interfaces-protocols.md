@@ -3,7 +3,7 @@
 - Interfaces = SATA, PCIe, Bus (le connecteur / le bus physique)
 - Protocoles = IDE, AHCI, NVMe (le langage de communication)
 
-***Firmware et Bootloader***
+**Firmware et Bootloader**
 
 - Firmware = UEFI (BIOS)
 - Bootloader = GRUB
@@ -23,7 +23,7 @@
 
 ## SATA
 
-***SATA*** => (Serial ATA)
+**SATA** => (Serial ATA)
 
 - SATA (Serial ATA) est la norme de câble et de connecteur qui sert à brancher la plupart des disques durs (HDD) et SSD à la carte mère.
 
@@ -63,7 +63,7 @@ Un disque dur utilise l'interface SATA, donc il se branche avec un câble SATA
 
 ## AHCI
 
-***AHCI*** => (Advanced Host Controller Interface)
+**AHCI** => (Advanced Host Controller Interface)
 
 - AHCI: règles de circulation pour le SATA et NCQ (PROTCOL) HDD + SSD.
 
@@ -89,7 +89,7 @@ NVMe est plus rapide que AHCI
 
 ## RAID
 
-***RAID*** (Redundant Array of Independent Disks)
+**RAID** (Redundant Array of Independent Disks)
 
 - RAID: méthode pour faire travailler plusieurs disks ensemble. 
 
@@ -160,7 +160,9 @@ Si un RAID logiciel existe (mdadm)
 
 ## NVMe
 
-***NVMe*** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
+**NVMe** => (Non-Volatile Memory Express) 128 - 256 - 512 - 1024 GB
+
+NVMe (Non-Volatile Memory Express) est un protocole (un langage de communication) conçu spécialement pour que le CPU parle très vite aux SSD modernes branchés sur le bus PCIe.
 
 - NVMe: Plus rapide que AHCI et fait pour SSD M.2 (connection du SSD M.2 sur Slot M.2 de la mother board)
 - Slot M.2: emplacement direct sur la carte mère (remplace SATA).
@@ -169,13 +171,49 @@ un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche di
 
 - IDE: Ne jamais utiliser pour les SSD (vieille techno !)
 
+```
+Caractéristique	      AHCI (SATA)	      NVMe (PCIe)	              Gain
+-------------------------------------------------------------------------------
+Débit max	            ~550 Mo/s	        ~7 000 Mo/s (PCIe 4.0)	  x12
+Nombre de files	      1 file (queue)	  65 535 files	            x65 535
+Commandes par file	  32 max	          65 535 max	              x2 048
+Latence	              ~6 µs	            ~3 µs	                    plus réactif
+```
+
+- Transfert d'un fichier de 50Go => 1m30 (NVMe) vs 10 minutes (SATA) → très visible
+
+**Le format physique : M.2**
+
+Un SSD NVMe ressemble à une barrette de chewing-gum qui se branche directement sur la carte mère (slot M.2). Pas de câbles.
+
+```
+Type de SSD	            Connectique	                Vitesse max
+-----------------------------------------------------------------
+SSD SATA	              Câble SATA + alimentation	  ~550 Mo/s
+SSD NVMe (PCIe 3.0)	    Slot M.2	                  ~3 500 Mo/s
+SSD NVMe (PCIe 4.0)	    Slot M.2	                  ~7 000 Mo/s
+SSD NVMe (PCIe 5.0)	    Slot M.2	                  ~12 000 Mo/s
+```
+
+**Voir si un disque est NVMe**
+
+`lspci | grep -i "non-volatile"`
+
+**Liste des disques NVMe**
+
+`lsblk | grep nvme`
+
+**Infos détaillées (si disque NVMe)**
+
+`sudo nvme list`
+
 [⬆️ up](#Hardware)
 
 ---
 
 ## PCIe
 
-***PCIe*** => (Peripheral Component Interconnect Express)
+**PCIe** => (Peripheral Component Interconnect Express)
 
 - PCIe (Peripheral Component Interconnect Express) est un bus (un réseau de communication) qui relie tous les composants critiques directement au processeur.
 
@@ -302,9 +340,9 @@ Processeur (le patron)
 
 ## UEFI (BIOS)
 
-***BIOS*** => (Basic Input/Output System) = UEFI
+**BIOS** => (Basic Input/Output System) = UEFI
 
-***UEFI*** => (Unified Extensible Firmware Interface)
+**UEFI** => (Unified Extensible Firmware Interface)
 
 - BIOS: est un micro-programme (un firmware) intégré dans une puce sur la carte mère, il lance l’OS.
 
@@ -327,7 +365,7 @@ Au moment où vous appuyez sur le bouton "Allumer", le BIOS :
 
 ## GRUB
 
-***GRUB*** => (Grand Unified Bootloader)
+**GRUB** => (Grand Unified Bootloader)
 
 - GRUB: juste après le menu de la carte mère (le BIOS)
 
