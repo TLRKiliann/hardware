@@ -1,4 +1,12 @@
-# HARDWARE PC
+# Interfaces et Protocoles
+
+- Interfaces = SATA, PCIe, Bus (le connecteur / le bus physique)
+- Protocoles = IDE, AHCI, NVMe (le langage de communication)
+
+***Firmware et Bootloader***
+
+- Firmware = UEFI (BIOS)
+- Bootloader = GRUB
 
 - [HARDWARE PC](#hardware-pc)
   - [SATA](#sata)
@@ -8,10 +16,11 @@
   - [NVMe](#nvme)
   - [PCIe](#pcie)
   - [BUS](#bus)
-    - [Chipset](#chipset)
+  - [Chipset](#chipset)
   - [UEFI (BIOS)](#uefi-bios)
   - [GRUB](#grub)
   
+
 ## SATA
 
 ***SATA*** => (Serial ATA)
@@ -255,7 +264,7 @@ Version plus lisible:
 
 ---
 
-### Chipset
+## Chipset
 
 ```
 Processeur (le patron)
