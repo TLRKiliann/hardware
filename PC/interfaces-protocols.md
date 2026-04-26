@@ -174,10 +174,10 @@ un SSD NVMe, lui, n'utilise ni câble SATA, ni interface SATA. Il se branche di
 ```
 Caractéristique	      AHCI (SATA)	      NVMe (PCIe)	              Gain
 -------------------------------------------------------------------------------
-Débit max	            ~550 Mo/s	        ~7 000 Mo/s (PCIe 4.0)	  x12
-Nombre de files	      1 file (queue)	  65 535 files	            x65 535
-Commandes par file	  32 max	          65 535 max	              x2 048
-Latence	              ~6 µs	            ~3 µs	                    plus réactif
+Débit max             ~550 Mo/s         ~7 000 Mo/s (PCIe 4.0)    x12
+Nombre de files       1 file (queue)    65 535 files              x65 535
+Commandes par file    32 max            65 535 max                x2 048
+Latence               ~6 µs             ~3 µs                     plus réactif
 ```
 
 - Transfert d'un fichier de 50Go => 1m30 (NVMe) vs 10 minutes (SATA) → très visible

@@ -8,6 +8,7 @@
   - [Carte graphique](#carte-graphique)
     - [GPU](#gpu)
   - [Carte réseau (internet)](#carte-réseau-internet)
+    - [Les normes Wi-Fi](#les-normes-wi-fi)
 
 ---
 
@@ -240,7 +241,60 @@ under dev
 
 ## Carte réseau (internet)
 
-under dev
+La carte réseau (ou Network Interface Card, NIC) est le composant qui permet à un ordinateur de communiquer avec d'autres appareils sur un réseau (internet, partage de fichiers, imprimante réseau, etc.).
+
+Ce qu'une carte réseau fait concrètement:
+
+- Elle reçoit des données du réseau (ex: une page web)
+
+- Elle les découpe / reassemble en paquets (trames Ethernet, paquets IP)
+
+- Elle vérifie l'intégrité (CRC, checksum)
+
+- Elle envoie des données du PC vers le réseau
+
+- Elle a une adresse MAC unique (gravée en usine, ne change jamais)
+
+```
+Type	                Support	        Vitesse typique	              Avantages / Inconvénients
+Ethernet (filaire)    Câble RJ45	    1 Gb/s, 2.5 Gb/s, 10 Gb/s	    Stable, rapide, pas d'interférences, mais câble
+Wi-Fi (sans fil)      Ondes radio	    300 Mb/s à 2.4 Gb/s	          Sans fil, pratique, mais moins stable, plus sensible aux interférences
+```
+
+**Liste des cartes réseau**
+
+`lspci | grep -i ethernet` (filaire)
+
+`lspci | grep -i network` (Wi-Fi)
+
+**Adresse MAC**
+
+`ip link ou ifconfig -a`
+
+**État de la connexion**
+
+`ip a ou nmcli device status`
+
+**Détails Wi-Fi**
+
+`iwconfig`
+
+**Statistiques trafic**
+
+`ip -s link`
+
+---
+
+### Les normes Wi-Fi
+
+```
+Nom technique     Nom commercial          Débit max         Fréquence
+------------------------------------------------------------------------
+802.11n               Wi-Fi 4             600 Mb/s        2.4 et 5 GHz
+802.11ac              Wi-Fi 5             3.5 Gb/s        5 GHz
+802.11ax              Wi-Fi 6             9.6 Gb/s        2.4 et 5 GHz
+802.11be              Wi-Fi 7             46 Gb/s         2.4, 5, 6 GHz
+```
 
 [⬆️ up](#Hardware)
 
