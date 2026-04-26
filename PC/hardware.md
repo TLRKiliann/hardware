@@ -257,8 +257,9 @@ Ce qu'une carte réseau fait concrètement:
 
 ```
 Type	                Support	        Vitesse typique	              Avantages / Inconvénients
-Ethernet (filaire)    Câble RJ45	    1 Gb/s, 2.5 Gb/s, 10 Gb/s	    Stable, rapide, pas d'interférences, mais câble
-Wi-Fi (sans fil)      Ondes radio	    300 Mb/s à 2.4 Gb/s	          Sans fil, pratique, mais moins stable, plus sensible aux interférences
+--------------------------------------------------------------------------------------------------------------------
+Ethernet (filaire)    Câble RJ45	    1 Gb/s, 2.5 Gb/s, 10 Gb/s     Stable, rapide, pas d'interférences, mais câble
+Wi-Fi (sans fil)      Ondes radio	    300 Mb/s à 2.4 Gb/s           Sans fil, pratique, mais moins stable, plus sensible aux interférences
 ```
 
 **Liste des cartes réseau**
@@ -295,6 +296,8 @@ Nom technique     Nom commercial          Débit max         Fréquence
 802.11ax              Wi-Fi 6             9.6 Gb/s        2.4 et 5 GHz
 802.11be              Wi-Fi 7             46 Gb/s         2.4, 5, 6 GHz
 ```
+
+Pour en savoir plus : voir 
 
 [⬆️ up](#Hardware)
 
