@@ -113,6 +113,15 @@ SATA, AHCI, NVMe, chipset – sont tous des composants qui existent pour une seu
 
 Le CPU est le boss. Le chipset, le bus PCIe, le protocole NVMe... tout est conçu pour que le CPU puisse lire et écrire des données le plus vite possible.
 
+**Rôle du CPU**
+
+- Effectue des calculs arithmétiques et logiques (addition, soustraction, comparaisons, etc.).
+- Contrôle le flux d’instructions (lecture, décodage, exécution, écriture des résultats).
+- Gère la mémoire en lisant/écrivant dans la RAM et les caches.
+- Coordonne les entrées/sorties (disques, réseau, périphériques) via des contrôleurs ou le chipset.
+- Répartit le temps d’exécution entre plusieurs tâches (multitâche) et gère les interruptions matérielles/logicielles.
+
+
 **Un CPU moderne exécute des milliards d'opérations par seconde**
 
 ```
