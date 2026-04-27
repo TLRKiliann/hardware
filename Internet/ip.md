@@ -2,6 +2,11 @@
 
 L'IP (Internet Protocol) fait partie de la couche 3 du modèle OSI, appelée couche réseau (ou Network Layer).
 
+## Trame et Paquet
+
+- Trame = couche liaison (Ethernet, Wi-Fi), elle contient les adresses MAC et encapsule le paquet IP
+- Paquet IP = couche réseau, indépendant du support physique
+
 **L'adresse IP que vous voyez (192.168.1.20) est une représentation décimale. En réalité, le routeur ou votre PC manipule sa forme binaire : 192.168.1.20 → 11000000 10101000 00000001 00010100 (32 bits).**
 
 ```
@@ -15,6 +20,26 @@ Couche            Nom                           Rôle                           
 2	            Liaison                 Adresses MAC, trames                Ethernet, Wi-Fi, PPP
 1	            Physique                Câbles, signaux, bits               RJ45, fibre optique, radio
 ```
+
+```
+Champ               Taille              Rôle
+----------------------------------------------------------------------------------------------------------
+Version             4 bits              IPv4 ou IPv6
+IHL                 4 bits              Longueur de l'en-tête (souvent 20 octets)
+Total Length        16 bits             Taille totale du paquet (en-tête + données)
+Identification 
++ Flags 
++ Fragment Offset   32 bits             Gestion de la fragmentation si le paquet est trop gros
+Time to Live (TTL)  8 bits              Nombre de sauts max (évite les boucles)
+Protocol            8 bits              Protocole transporté (6 = TCP, 17 = UDP, 1 = ICMP)
+Header Checksum     16 bits             Vérification d'intégrité de l'en-tête
+Source Address      32 bits             IP de l'émetteur (ex: 192.168.1.1)
+Destination Address 32 bits             IP du destinataire
+Options             variable            Rarement utilisé
+Data (payload)      variable                            Le message réel (ex: un segment TCP, une requête UDP)
+```
+
+## Les couches en pratique
 
 Un routeur travaille à la couche 3 (il lit les IP).
 Un switch travaille à la couche 2 (il lit les MAC).
@@ -89,12 +114,35 @@ Checksum                16 bits         0x8a3f                      Vérifier qu
 ## Ce qui rend l'IP fonctionnelle
 
 - Comment formater l'en-tête (vu ci-dessus)
-
 - Comment router (trouver le chemin)
-
 - Comment fragmenter (couper en petits paquets si besoin)
-
 - Comment gérer les erreurs (avec ICMP)
+
+---
+
+## Trame IP internet
+
+```
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Version|  IHL  |Type of Service|          Total Length         |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|         Identification        |Flags|      Fragment Offset    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|  Time to Live |    Protocol   |         Header Checksum       |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                       Source Address                          |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                    Destination Address                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                    Options (if any)                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
+|                         DATA (payload)                        |
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+```
 
 ---
 
@@ -112,10 +160,10 @@ Voir son ip en détail
 
 Voir l'ip publique
 
-`wget -qO- icanhazip.com`
+`wget -qO- icanhazip.com` (-q = quiet)
 
 ou
 
-`curl -s icanhazip.com`
+`curl -s icanhazip.com` (-s = silent)
 
 ---
