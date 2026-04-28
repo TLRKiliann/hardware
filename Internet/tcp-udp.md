@@ -249,6 +249,7 @@ Pendant l'envoi, dans un 3ème terminal
 
 `ss -t -a -p`        # montre avec les processus
 
+**Création et traitement d'un segment TCP**
 
 1. [RAM] Votre application écrit dans un socket
 2. [CPU] Le noyau crée le segment TCP
