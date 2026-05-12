@@ -54,5 +54,3 @@ Pour éviter la multiplication des copies (chère en CPU et en occupation de bus
 
 ## Réponse simplifiée (synthèse)
 > Le CPU copie les données de l’application vers un buffer en RAM du noyau, ajoute les en-têtes TCP/IP/Ethernet (en calculant les sommes de contrôle), puis place le paquet dans une file d’attente. Ensuite, il programme la carte réseau pour qu’elle lise le paquet directement en RAM via DMA, sans que le CPU ne touche plus aux données.
-
-Si tu veux, je peux aussi expliquer le chemin **inverse** (paquet reçu → application).
