@@ -9,6 +9,7 @@
 - Bootloader = GRUB
 
 - [HARDWARE PC](#hardware-pc)
+  - [SCSI](#scsi)
   - [SATA](#sata)
     - [Logique SATA](#logique-sata)
   - [AHCI](#ahci)
@@ -20,6 +21,14 @@
   - [UEFI (BIOS)](#uefi-bios)
   - [GRUB](#grub)
   
+
+## SCSI
+
+**SCSI** => ("scuzzy", Small Computer System Interface)
+
+Le SCSI permet de brancher plusieurs périphériques sur un même câble (ou chaîne) à l'intérieur ou à l'extérieur du PC : disques durs, scanners, graveurs de CD, lecteurs de bandes, etc.
+
+Le SCSI servait à faire travailler ensemble des machines professionnelles (disques, scanners, graveurs) sans que l'ordinateur principal ne ralentisse. C'était l'outil indispensable des graphistes, monteurs vidéo et administrateurs réseau avant l'ère de l'USB et du SATA.
 
 ## SATA
 
@@ -113,37 +122,41 @@ RAID 10
 
 ```
 SANS RAID (2 disques séparés) :
-┌────────┐     ┌────────┐
+┌────-────┐     ┌────-────┐
 │ Disque A│     │ Disque B│
 │ Fichier │     │ Fichier │
 │ complet │     │ complet │
-└────────┘     └────────┘
+└────-────┘     └────-────┘
 → Le système voit deux lettres (D: et E:)
 
 RAID 0 (découpage) :
-┌────────┐     ┌────────┐
+┌────-────┐     ┌────-────┐
 │ Disque A│     │ Disque B│
 │ Moitié  │     │ Moitié  │
 │ du      │     │ du      │
 │ fichier │     │ fichier │
-└────────┘     └────────┘
+└────-────┘     └────-────┘
 → Le système voit une seule lettre (D:)
 
 RAID 1 (miroir) :
-┌────────┐     ┌────────┐
+┌────-────┐     ┌────-────┐
 │ Disque A│     │ Disque B│
-│ Copie   │ =  │ Copie   │
+│ Copie   │ =   │ Copie   │
 │ exacte  │     │ exacte  │
-└────────┘     └────────┘
+└────-────┘     └────-────┘
 → Le système voit une seule lettre (D:)
 ```
 
 Les deux types de RAID
 
 ```
-Type	                Où ça se passe ?	                                                  Avantage	                                                          Inconvénient
-RAID matériel	        Sur une carte contrôleur dédiée (souvent dans les serveurs)	        Transparent pour le système, plus rapide	                          Cher, carte spécifique
-RAID logiciel	        Géré par le système d'exploitation (Linux mdadm, Windows, macOS)	  Gratuit, flexible, fonctionne avec n'importe quels disques	        Utilise un peu de CPU
+Type            Où ça se passe ?                                                      Inconvénient
+-------------------------------------------------------------------------------------------------------------
+RAID matériel   Sur une carte contrôleur dédiée (souvent dans les serveurs)           Cher, carte spécifique
+(Avantage)      Transparent pour le système, plus rapide
+
+RAID logiciel   Géré par le système d'exploitation (Linux mdadm, Windows, macOS)	  
+(Avantage)      Gratuit, flexible, fonctionne avec n'importe quels disques            Utilise un peu de CPU
 ```
 
 Voir les disques et leur organisation
