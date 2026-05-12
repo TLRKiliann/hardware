@@ -7,7 +7,7 @@ Un segment TCP voyage à l'intérieur d'un paquet IP, lui-même à l'intérieur 
 
 ```
 Paquet IP                   Segment TCP
--------------------------------------------------------------
+--------------------------------------------------------------
 Couche réseau               Couche transport
 Gère les adresses IP        Gère les ports et la fiabilité
 Sans connexion              Avec connexion fiable
@@ -55,7 +55,7 @@ Entre client-server / client-client / server-server / client-imprimante (voir la
 
 ```
 Champ                   Taille              Rôle
--------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 Source Port             16 bits             Port de l'application émettrice (ex: 54321)
 Destination Port        16 bits             Port de l'application destinataire (ex: 80 pour HTTP, 443 pour HTTPS)
 Sequence Number         32 bits             Numéro du premier octet de données (ordonnancement, réassemblage)
@@ -312,8 +312,6 @@ Pendant l'envoi, dans un 3ème terminal
 **Pour un port spécifique (ex: HTTP)**
 
 `sudo tcpdump -i eth0 tcp port 80`
-
-****
 
 **Observer les SYN (nouvelles connexions)**
 
